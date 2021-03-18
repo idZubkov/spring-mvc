@@ -1,15 +1,15 @@
 package web.dao;
 
+import org.springframework.stereotype.Repository;
 import web.model.Car;
 
-import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class CarDaoImpl implements CarDao {
 
     @Override
-    public List<Car> carsFromTheList(int count) {
-        List<Car> listOfCars = new ArrayList<>();
+    public List<Car> carsFromTheList(List<Car> listOfCars, int count) {
         if (count <= 0) {
             switch (count) {
                 case 1:

@@ -5,10 +5,20 @@
     <title>Cars</title>
 </head>
 <body>
-<table>
-    <thead>
+<table border="1">
+    <tr>
+        <th>Car Brand</th>
+        <th>Color</th>
+        <th>Age</th>
+    </tr>
 
-    </thead>
+    <tr th:each="car : ${carList}">
+        <td th:utext="${car.getCarBrand}">Car Brand</td>
+        <td th:utext="${car.getColor}">Color</td>
+        <td th:utext="${car.getAge}">Age</td>
+
+    </tr>
+
 </table>
 
 </body>
