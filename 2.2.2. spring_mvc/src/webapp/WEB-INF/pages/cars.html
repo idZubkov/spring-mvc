@@ -6,19 +6,20 @@
 </head>
 <body>
 <table border="1">
+    <thead>
     <tr>
         <th>Car Brand</th>
         <th>Color</th>
         <th>Age</th>
     </tr>
 
-    <tr th:each="car : ${carList}">
+    <tr th:each="car : ${cars}">
         <td th:utext="${car.getCarBrand}">Car Brand</td>
         <td th:utext="${car.getColor}">Color</td>
         <td th:utext="${car.getAge}">Age</td>
 
     </tr>
-
+    </thead>
 </table>
 
 </body>
