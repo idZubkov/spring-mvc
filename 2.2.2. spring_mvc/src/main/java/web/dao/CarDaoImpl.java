@@ -22,30 +22,13 @@ public class CarDaoImpl implements CarDao {
     public List<Car> carsFromTheList(List<Car> carList, int count) {
         List<Car> newCarList = new ArrayList<>();
         if (count > 0 && count < 5) {
-            switch (count) {
-                case 1:
-                    newCarList.add(carList.get(0));
-                    return newCarList;
-                case 2:
-                    for (int i = 0; i < 2; i++) {
-                        newCarList.add(carList.get(i));
-                    }
-                    return newCarList;
-                case 3:
-                    for (int i = 0; i < 3; i++) {
-                        newCarList.add(carList.get(i));
-                    }
-                    return newCarList;
-                case 4:
-                    for (int i = 0; i < 4; i++) {
-                        newCarList.add(carList.get(i));
-                    }
-                    return newCarList;
-                default:
-                    newCarList.addAll(carList);
-                    return newCarList;
+            for (int i = 0; i < count; i++) {
+                newCarList.add(carList.get(i));
             }
+        } else {
+            newCarList.addAll(carList);
+            return newCarList;
         }
-        return carList;
+        return newCarList;
     }
 }
