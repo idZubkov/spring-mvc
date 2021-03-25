@@ -15,9 +15,9 @@
     </tr>
 
     <tr th:each="car : ${cars}">
-        <td th:utext="${car.getCarBrand}">Car Brand</td>
-        <td th:utext="${car.getColor}">Color</td>
-        <td th:utext="${car.getAge}">Age</td>
+        <td th:utext="${car.carBrand}">Car Brand</td>
+        <td th:utext="${car.color}">Color</td>
+        <td th:utext="${car.age}">Age</td>
     </tr>
     </thead>
 </table>
